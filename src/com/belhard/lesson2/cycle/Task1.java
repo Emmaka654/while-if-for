@@ -10,11 +10,16 @@ public class Task1 {
         System.out.print("Please enter number: ");
         int num = input(scanner, 10);
 
+        int result = sumFromOneToInput(num);
+
+        System.out.println("Sum from 1 to " + num + " = " + result);
+    }
+
+    private static int sumFromOneToInput(int num) {
         int result = 0;
-        for (int i = 1; i <= num; i++){
+        for (int i = 1; i <= num; i++) {
             result += i;
         }
-
-        System.out.println("Sum from 1 to "+ num +  " = " + result);
+        return result;
     }
 }
