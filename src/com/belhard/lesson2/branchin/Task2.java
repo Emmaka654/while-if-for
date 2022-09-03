@@ -11,15 +11,19 @@ public class Task2 {
         System.out.print("Please enter number: ");
         int x = input(scanner, 10);
 
-        double y;
-        if (x > 3){
-            y = (1 / (Math.pow(x, 3) + 6));
-        }
-        else {
-            y = Math.pow(x, 2)- 3 * x + 9;
-        }
+        double y = calculateFunction(x);
 
         System.out.println("Result = " + y);
+    }
+
+    private static double calculateFunction(int x) {
+        double y;
+        if (x > 3) {
+            y = 1 / x * x * x + 6;
+        } else {
+            y = x * x - 3 * x + 9;
+        }
+        return y;
     }
 }
 
